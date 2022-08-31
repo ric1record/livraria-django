@@ -1,10 +1,13 @@
 from rest_framework.viewsets import ModelViewSet
+
 # from rest_framework.permissions import IsAuthenticated
 
-from core.models import Categoria, Editora, Livro
+from core.models import Autor, Categoria, Editora, Livro
 from core.serializers import (
+    AutorSerializer,
     CategoriaSerializer,
     EditoraSerializer,
+    AutorSerializer,
     LivroSerializer,
     LivroDetailSerializer,
 )
@@ -19,6 +22,11 @@ class CategoriaViewSet(ModelViewSet):
 class EditoraViewSet(ModelViewSet):
     queryset = Editora.objects.all()
     serializer_class = EditoraSerializer
+
+
+class AutorViewSet(ModelViewSet):
+    queryset = Autor.objects.all()
+    serializer_class = AutorSerializer
 
 
 class LivroViewSet(ModelViewSet):
