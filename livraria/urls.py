@@ -16,8 +16,11 @@ router.register(r"editoras", EditoraViewSet)
 router.register(r"livros", LivroViewSet)
 
 urlpatterns = [
+    # Admin
     path("admin/", admin.site.urls),
-    path("", include(router.urls)),
+    # SimpleJWT - Login
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    # API DRF
+    path("", include(router.urls)),
 ]
