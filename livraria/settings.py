@@ -13,6 +13,17 @@ DEBUG = env("DEBUG")
 ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(",")
 DATABASES = {"default": env.db()}
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "livraria",
+#         "USER": "aluno",
+#         "PASSWORD": "aluno",
+#         "HOST": "127.0.0.1",
+#         "PORT": "3306",
+#     }
+# }
+
 
 # Application definition
 
@@ -27,7 +38,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "rest_framework",
     "rest_framework_simplejwt",
-    "media",
+    "uploader",
     "core",
 ]
 
@@ -123,7 +134,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = "http://localhost:8000/media/"
 MEDIA_ENDPOINT = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media_files/")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 FILE_UPLOAD_PERMISSIONS = 0o640
 
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

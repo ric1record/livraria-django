@@ -1,6 +1,6 @@
 from django.db import models
 
-from media.models import Image
+from uploader.models import Image
 
 from .autor import Autor
 from .categoria import Categoria

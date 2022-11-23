@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from media.models import Document
+from uploader.models import Document
 from utils.files import CONTENT_TYPE_PDF, get_content_type
 
 

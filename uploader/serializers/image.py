@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from media.models import Image
+from uploader.models import Image
 from utils.files import CONTENT_TYPE_JPG, CONTENT_TYPE_PNG, get_content_type
 
 

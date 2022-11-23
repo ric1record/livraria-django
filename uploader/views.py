@@ -1,7 +1,7 @@
 from rest_framework import mixins, parsers, viewsets
 
-from media.models import Document, Image
-from media.serializers import DocumentUploadSerializer, ImageUploadSerializer
+from uploader.models import Document, Image
+from uploader.serializers import DocumentUploadSerializer, ImageUploadSerializer
 
 
 class CreateViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):

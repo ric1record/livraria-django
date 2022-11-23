@@ -1,8 +1,8 @@
 from rest_framework.routers import DefaultRouter
 
-from media import views
+from uploader import views
 
-app_name = "media"
+app_name = "uploader"
 
 router = DefaultRouter()
 router.register("images", views.ImageUploadViewSet)
